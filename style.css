@@ -1,0 +1,119 @@
+/* Minimal academic style, modeled on a plain hand-written HTML homepage. */
+body {
+  background-color: #FEFDFA;
+  color: #404040;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  line-height: 1.35;
+  margin: 8px 12px;
+}
+
+a { text-decoration: none; color: #0000A0; }
+a:visited { color: #A000A0; }
+a:active { color: #00A000; }
+a:hover { text-decoration: underline; }
+
+tt, code { font-family: "Courier New", Courier, monospace; }
+
+hr { border: 0; border-top: 1px solid #ccc; }
+
+/* Every page: header and content share one centered column */
+.page { max-width: 60em; margin: 0 auto; }
+
+/* Home page header: name + affiliation on the left, optional logo on the right */
+.header { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.header .name { font-size: 1.5em; font-weight: bold; }
+.header .affil { font-size: 1.2em; font-weight: bold; margin-top: 12px; }
+.header img { height: 112px; display: block; }
+
+/* Navbar under the name: links separated by thin bars */
+.nav { margin-top: 14px; display: flex; flex-wrap: wrap; row-gap: 4px; }
+.nav a + a::before { content: "|"; color: #ccc; margin: 0 10px; display: inline-block; }
+.nav a[aria-current="page"] { color: #404040; font-weight: bold; }
+
+/* On subpages the name links home but looks the same as on the home page */
+.header .name a, .header .name a:visited { color: inherit; }
+
+/* Home page body: text on the left, portrait on the right */
+.main { display: flex; gap: 24px; align-items: flex-start; }
+.main .text { flex: 0 1 60em; min-width: 0; }
+/* auto side margins center the photo in whatever space the text leaves.
+   Fixed width so swapping in a wider or taller photo doesn't shift the text. */
+.main .portrait { flex: 0 0 320px; max-width: 100%; margin: 0 auto; text-align: center; }
+.portrait button { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: pointer; }
+/* Every photo fills the original portrait's 4:5 frame, zoomed and cropped as needed */
+.portrait img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.portrait figcaption { margin-top: 8px; font-style: italic; }
+
+.contact td { padding: 0 24px 0 0; vertical-align: top; }
+
+/* Subpage title, below the shared header */
+.pagetitle { margin: 16px 0 4px; }
+
+h4 { margin: 20px 0 8px; }
+/* Section heading on every subpage (Education, Conference Papers, Core Projects...) */
+.section { font-size: 1.15em; border-bottom: 1px solid #404040; padding-bottom: 2px; margin: 22px 0 8px; }
+/* Title of one entry inside a section (a project) */
+h5 { font-size: 1em; margin: 16px 0 6px; }
+/* Title on the left, date on the right, as on the CV */
+.row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.row > :last-child { white-space: nowrap; }
+.when { font-weight: normal; }
+ul { margin-top: 0; }
+li { margin-bottom: 10px; }
+.me { font-weight: bold; }
+
+/* Home page "What's new?" list */
+.news-head { margin-top: 44px; }
+
+/* Each letter jumps in turn, so a wave runs along the heading, then pauses */
+.bounce span span {
+  display: inline-block;
+  animation: bounce 2.4s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.08s);
+}
+@keyframes bounce {
+  0%, 30%, 100% { transform: translateY(0); }
+  10% { transform: translateY(-8px); }
+  18% { transform: translateY(0); }
+  23% { transform: translateY(-3px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bounce span span { animation: none; }
+}
+.news { padding-left: 20px; }
+.news li { margin-bottom: 8px; }
+
+/* CV page, laid out like the PDF CV */
+.cvdoc .entry { margin: 0 0 12px 12px; }
+.cvdoc ul { margin: 4px 0 0; padding-left: 20px; }
+.cvdoc li { margin-bottom: 3px; }
+.cvdoc b a, .cvdoc i a { color: inherit; }
+.skills { margin-left: 12px; }
+.skills th { text-align: left; padding: 1px 32px 1px 0; white-space: nowrap; vertical-align: top; }
+.skills td { padding: 1px 0; }
+
+@media (max-width: 640px) {
+  .main { flex-direction: column-reverse; }
+  .main .portrait { flex: none; width: 220px; }
+  .header img { height: 64px; }
+}
+
+/* Project page: image floats right of the description, below the title row */
+.project { overflow: hidden; }  /* contains the floated image */
+.project p { margin-top: 0; }
+.project-img { float: right; max-width: 30%; max-height: 250px; height: auto; margin: 0 0 1em 1.5em;
+  mix-blend-mode: multiply; }  /* white image backgrounds take on the cream page color */
+.project-img.logo { max-width: 20%; }  /* wide logos read smaller than photos and screenshots */
+@media (max-width: 640px) {
+  .project-img, .project-img.logo { float: none; display: block; max-width: 100%; margin: 0 0 1em; }
+  .project-img.logo { max-width: 60%; }
+}
+
+/* "In Progress..." label next to a project title */
+.status {
+  display: inline-block; vertical-align: middle; margin-right: 0.5em;
+  padding: 1px 8px; border: 1px solid #C07000; border-radius: 3px;
+  color: #C07000; background: #FFF6E5;
+  font-size: 0.75em; font-weight: normal; font-style: italic;
+}

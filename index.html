@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Christian Scaff">
+  <meta name="description" content="The personal website of Christian Scaff.">
+  <title>Christian Scaff | Columbia University</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="name">Christian Scaff</div>
+      <div class="affil">MS Student at Columbia University</div>
+      <nav class="nav">
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a href="cv.html">Curriculum Vit&aelig;</a>
+        <a href="https://christianscaff.com">Photography</a>
+      </nav>
+    </div>
+    <a href="https://www.cs.columbia.edu/~ms6147/#about"><img src="images/FoRG_logo_transparent.png" alt="Formal Methods &amp; Reasoning Group"></a>
+  </div>
+  <hr>
+
+  <div class="main">
+    <div class="text">
+      <table class="contact" cellspacing="0">
+        <tr><td>E-mail:</td><td><a href="mailto:christian.scaff@columbia.edu"><tt>christian.scaff@columbia.edu</tt></a></td></tr>
+      </table>
+
+      <p>
+        I am a graduate research assistant in the <a href="https://www.cs.columbia.edu/~ms6147/#about">Formal Methods &amp; Reasoning Group</a>,
+        where I am advised by <a href="https://www.marksantolucito.com">Prof. Mark Santolucito</a>.
+        My research is broadly focused on the intersection of formal methods and AI. I am currently working on agentic systems for FPGA programming with a focus on SAT solving. Before starting my graduate studies,
+        I interned at the <a href="https://gtri.gatech.edu/focus-areas/advanced-research-computing-and-artificial-intelligence">Georgia Tech Research Institute ARCAID</a>, working at the intersection of ontology and program analysis. I also worked as an undergraduate research programmer
+        at the <a href="https://gataslab.org/index.html">GATAS</a> Laboratory, working on applied category theory software for scientific computing.
+        
+        You can find me on
+        <a href="https://github.com/cscaff">GitHub</a>,
+        <a href="https://scholar.google.com/citations?user=2n_vi3MAAAAJ&hl=en&oi=ao">Google Scholar</a>,
+        and
+        <a href="https://www.linkedin.com/in/christian-scaff/">LinkedIn</a>.
+      </p>
+
+      <h4 class="news-head bounce" aria-label="What's new?"><span aria-hidden="true"><span style="--i:0">W</span><span style="--i:1">h</span><span style="--i:2">a</span><span style="--i:3">t</span><span style="--i:4">'</span><span style="--i:5">s</span><span style="--i:6">&nbsp;</span><span style="--i:7">n</span><span style="--i:8">e</span><span style="--i:9">w</span><span style="--i:10">?</span></span></h4>
+      <ul class="news">
+        <li><b>September 2026</b> &ndash; The <a href="https://github.com/ManhattanReasoning">Manhattan Reasoning</a> team grows to ten members, working towards <a href="https://manhattanreasoning.com/research.html">making FPGAs more accessible</a>.</li>
+        <li><b>August 2026</b> &ndash; Our paper <i>&ldquo;Mining Beyond the Bools: Learning Data Transformations and Temporal Specifications&rdquo;</i>
+          was accepted to <i>ESOP 2027</i>. The preprint is available on <a href="https://arxiv.org/abs/2603.06710">arXiv</a>.</li>
+        <li><b>July 2026</b> &ndash; Attended my first conference! The Federated Logic Conference <a href="https://www.floc26.org">(FLoC)</a> Mentoring Workshop and <a href="https://conferences.i-cav.org/2026/">CAV</a> in Lisbon, Portugal.</li>
+        <li><b>June 2026</b> &ndash; Our paper <i>&ldquo;PALS: Preference-guided Active Automata Learning for Symbolic Reinforcement Learning in Games&rdquo;</i>
+          was accepted to the <i>NExT-Game</i> workshop at ICML 2026 (<a href="https://openreview.net/forum?id=jRUJpASPQJ">OpenReview</a>).</li>
+        <li><b>May 2026</b> &ndash; Our venture, <a href="https://github.com/ManhattanReasoning">Manhattan Reasoning</a>, received a $50,000 award from the <i>NSF I-Corps National Program</i>.</li>
+        <li><b>Jan 2026</b> &ndash; Started a new project on <a href="projects.html#equivalence-checking">Equivalence Checking</a> for <a href="https://www.darpa.mil/research/programs/mocha-machine-learning">DARPA MOCHA</a> under <a href="https://www.cs.columbia.edu/~sedwards/">Prof. Stephen A. Edwards</a>.</li>
+        <li><b>Sep 2025</b> &ndash; Started my M.S. in Computer Science at Columbia University and joined the
+          <a href="https://www.cs.columbia.edu/~ms6147/#about">Formal Methods &amp; Reasoning Group</a>.</li>
+        <li><b>May 2025</b> &ndash; Graduated from the University of Florida with a B.S. in Computer Science, and started a research internship at the
+          <a href="https://gtri.gatech.edu">Georgia Tech Research Institute</a>.</li>
+      </ul>
+    </div>
+    <figure class="portrait">
+      <button type="button" id="surprise" aria-label="Show a random photo">
+        <img id="surprise-img" src="images/portrait.jpg" alt="Christian Scaff">
+      </button>
+      <figcaption id="surprise-caption">Click for Surprise!</figcaption>
+    </figure>
+  </div>
+</div>
+
+<script>
+  // Photos shown when the portrait is clicked. To add one, put the file in
+  // images/random/ and add a line here; the caption replaces "Click for Surprise!".
+  // The first entry is the original portrait, so clicking can land back on it.
+  var surprises = [
+    { src: "images/portrait.jpg",                       caption: "Click for Surprise!", alt: "Christian Scaff" },
+    { src: "images/random/000045010017.jpeg",           caption: "Me with my Minolta X-700." },
+    { src: "images/random/20241022_230903300_iOS.jpeg", caption: "Rock climbing at the Knot, Gainesville, FL" },
+    { src: "images/random/20241023_143105470_iOS.jpeg", caption: "Me as Garfield for Halloween." },
+    { src: "images/random/20250330_180922000_iOS.jpeg", caption: "Me modeling as a member of the circus." }
+  ];
+
+  var current = 0;  // index of the photo on screen; starts on the original portrait
+  document.getElementById("surprise").addEventListener("click", function () {
+    var next = current;
+    // pick a different photo from the one already showing
+    while (surprises.length > 1 && next === current) {
+      next = Math.floor(Math.random() * surprises.length);
+    }
+    current = next;
+    var img = document.getElementById("surprise-img");
+    img.src = surprises[next].src;
+    img.alt = surprises[next].alt || surprises[next].caption;
+    document.getElementById("surprise-caption").textContent = surprises[next].caption;
+  });
+</script>
+</body>
+</html>

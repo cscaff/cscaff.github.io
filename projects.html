@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Christian Scaff">
+  <meta name="description" content="Projects by Christian Scaff.">
+  <title>Projects | Christian Scaff</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="name"><a href="index.html">Christian Scaff</a></div>
+      <div class="affil">MS Student at Columbia University</div>
+      <nav class="nav">
+        <a href="publications.html">Publications</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="cv.html">Curriculum Vit&aelig;</a>
+        <a href="https://christianscaff.com">Photography</a>
+      </nav>
+    </div>
+    <a href="https://www.cs.columbia.edu/~ms6147/#about"><img src="images/FoRG_logo_transparent.png" alt="Formal Methods &amp; Reasoning Group"></a>
+  </div>
+  <hr>
+
+  <h3 class="pagetitle">Projects</h3>
+
+  <h4 class="section">Core Projects</h4>
+
+  <div class="project" id="sat-competition">
+  <h5><span class="status">Coming Soon...</span> Agentic Satisfiability Acceleration Competition '27</h5>
+  <p>
+    I am currently working with <a href="https://manuelhidalgosola.dev">Manuel Hidalgo Sola</a> to develop a new kind of <a href="https://satcompetition.github.io">SAT Competition</a> focused on hardware accelerated SAT solvers.
+    SAT solvers remain a difficult challenge for hardware acceleration due to their sequential dependencies and memory-bound nature. We believe coding agents coupled with our Manhattan Reasoning
+    FPGA framework can open new opportunities for research within the area. We aim to open the competition to the public in 2027.
+  </p>
+  </div>
+
+  <div class="project" id="manhattan-reasoning">
+  <h5 class="row"><a href="https://docs.manhattanreasoning.com">Manhattan Reasoning FPGA Framework</a><span class="when">June 2025 &ndash; Present</span></h5>
+  <img class="project-img" src="images/IMG_4872.jpeg" alt="Manhattan Reasoning FPGA Framework">
+  <p>
+    Do you like FPGAs? Ever wish you could throw your favorite coding agent at one without
+    having to buy a physical FPGA or wait for AWS to give you access to F2? Manhattan Reasoning aims to be
+    the Modal of FPGAs. Remotely program FPGAs in Python like a cloud function. We currently only support 7 Lattice ECP5s
+    locally in our lab. We are working to expand to AWS F2 as a backend. <a href="https://manhattanreasoning.com/#beta">Try the beta!</a>
+  </p>
+  </div>
+
+  <div class="project" id="wyvern-graph">
+  <h5 class="row"><a href="https://github.com/cscaff/Wyvern-Graph">Wyvern Graph</a><span class="when">May 2025 &ndash; Aug 2025</span></h5>
+  <img class="project-img" src="images/filtering_category.gif" alt="Wyvern Graph knowledge graph being filtered by category">
+  <p>
+    Want to translate your program into a knowledge graph? Wyvern Graph can translate LLVM IR into a knowledge graph, conveying
+    syntax, memory, data, and control flow.
+  </p>
+  </div>
+
+  <div class="project" id="algebraicjulia">
+  <h5 class="row"><a href="https://github.com/AlgebraicJulia">AlgebraicJulia</a><span class="when">Aug 2024 &ndash; May 2025</span></h5>
+  <img class="project-img logo" src="images/gatas_bar_UF.png" alt="University of Florida GATAS Lab logo">
+  <p>
+    I spent my senior year of undergrad contributing to the AlgebraicJulia software ecosystem, an open-source
+    collection of Julia packages for applied category theory and scientific computing.
+  </p>
+  <ul>
+    <li>Contributed to DiagrammaticEquations.jl, an embedded DSL for representing
+      <a href="https://github.com/AlgebraicJulia/Decapodes.jl">Decapodes.jl</a> multiphysics equations.</li>
+    <li>Developed <a href="https://algebraicjulia.github.io/Catlab.jl/latest/generated/peg-parser/dsl_peg_tutorial/">parsing expression grammars</a> for embedded DSLs in <a href="https://github.com/AlgebraicJulia/Catlab.jl">Catlab.jl</a> and <a href="https://github.com/AlgebraicJulia/ACSets.jl">ACSets.jl</a>.</li>
+    <li>Developed an <a href="https://algebraicjulia.github.io/AlgebraicOptimization.jl/dev/generated/sheaf_macro/">embedded DSL</a> for representing cellular sheaves in <a href="https://github.com/AlgebraicJulia/AlgebraicOptimization.jl">AlgebraicOptimization.jl</a>.</li>
+  </ul>
+  </div>
+
+  <h4 class="section">Miscellaneous Projects</h4>
+
+  <div class="project" id="pigweedsat">
+  <h5 class="row"><a href="https://github.com/cscaff/PigWeedSAT">PigWeedSAT</a><span class="when">Oct 2026</span></h5>
+  <img class="project-img logo" src="images/pigweed.jpg" alt="PigWeedSAT logo">
+  <p>
+    An <a href="https://github.com/amaranth-lang/amaranth">Amaranth HDL</a> reimplementation of the SAT-Accel CDCL SAT solver
+    (<a href="https://doi.org/10.1145/3706628.3708869">Lo, Chang &amp; Cong, FPGA '25</a>) for the Lattice ECP5, running on <a href="https://docs.manhattanreasoning.com">Manhattan Reasoning</a> cloud FPGAs.
+    On the SATLIB benchmarks from the SAT-Accel paper, it solves every instance that fits on-chip and averages 122&times; faster than the SAT-Hard FPGA solver (<a href="https://agra.informatik.uni-bremen.de/doc/konf/2019_DSD_HW-SAT-Solver_with_Learning.pdf">Ustaoglu et al., DSD '19</a>).
+    It also adds optional solver heuristics from MiniSat, Glucose and Kissat.
+  </p>
+  </div>
+
+  <div class="project" id="equivalence-checking">
+  <h5 class="row"><a href="https://github.com/cscaff/COMSE6901-Experiment-Repo">Equivalence Checking LLM-Optimized Code for GPUs</a><span class="when">Spring 2026</span></h5>
+  <p>
+    A semester of research with <a href="https://www.cs.columbia.edu/~sedwards/">Prof. Stephen A. Edwards</a> on the equivalence checker
+    in MACCHIATO, a compiler tool-chain for the DARPA MOCHA program that uses language models to rewrite code for hardware accelerators.
+    I explored different approaches to establishing that C++ programs and their LLM-optimized CUDA rewrites are equivalent.
+    <a href="https://github.com/cscaff/COMSE6901-Experiment-Repo/blob/main/project_report.pdf">Read the report.</a>
+  </p>
+  </div>
+
+  <div class="project" id="room-eq">
+  <h5 class="row"><a href="https://github.com/cscaff/Embedded-Real-Time-Room-EQ-Correction">Real-Time Room EQ Correction</a><span class="when">Spring 2026</span></h5>
+  <img class="project-img" src="images/EQ_graph.png" alt="Graph of the room's original vs. corrected frequency response, 20 Hz to 20 kHz">
+  <p>
+    A room equalization device built on the DE1-SoC with <a href="https://jakebox.github.io">Jacob Boxerman</a> and <a href="https://rlist07.github.io">Roland List</a>.
+    The FPGA plays a logarithmic sine sweep through the speakers and records the room's response through a microphone.
+    The ARM CPU runs an FFT on that recording and computes correction coefficients. A real-time FIR filter bank on the FPGA
+    then applies them to all incoming audio, compensating for the room's acoustics.
+    <a href="https://www.cs.columbia.edu/~sedwards/classes/2026/4840-spring/reports/Real-Time-Room-EQ-report.pdf">Read the report.</a>
+  </p>
+  </div>
+
+  <div class="project" id="tsl-cops-robbers">
+  <h5 class="row"><a href="https://github.com/cscaff/TSL_Cops_And_Robbers">TSL Cops and Robbers</a><span class="when">Fall 2025</span></h5>
+  <img class="project-img" src="images/TSL_cops_robbers.gif" alt="Synthesized cop (blue) chasing the robber (red) on a 7 by 7 grid">
+  <p>
+    A cop agent synthesized from a <a href="https://github.com/Barnard-PL-Labs/tsltools">TSL Modulo Theories</a> specification
+    that is guaranteed to catch the robber on a 7&times;7 grid. The chase strategy is entirely synthesized from the temporal specification.
+  </p>
+  </div>
+</div>
+</body>
+</html>

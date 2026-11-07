@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Christian Scaff">
+  <meta name="description" content="The curriculum vitae of Christian Scaff.">
+  <title>Curriculum Vit&aelig; | Christian Scaff</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="name"><a href="index.html">Christian Scaff</a></div>
+      <div class="affil">MS Student at Columbia University</div>
+      <nav class="nav">
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a href="cv.html" aria-current="page">Curriculum Vit&aelig;</a>
+        <a href="https://christianscaff.com">Photography</a>
+      </nav>
+    </div>
+    <a href="https://www.cs.columbia.edu/~ms6147/#about"><img src="images/FoRG_logo_transparent.png" alt="Formal Methods &amp; Reasoning Group"></a>
+  </div>
+  <hr>
+
+  <div class="cvdoc">
+  <h3 class="pagetitle">Curriculum Vit&aelig;</h3>
+
+  <h4 class="section">Education</h4>
+  <div class="entry">
+    <div class="row"><b><a href="https://www.cs.columbia.edu">Columbia University</a></b><span>Sep 2025 &ndash; Dec 2026</span></div>
+    <div class="row"><span><i>M.S. in Computer Science</i>, personalized track (expected Dec 2026)</span><span>GPA: 3.62/4.0</span></div>
+    <div>Advised by <a href="https://www.marksantolucito.com">Prof. Mark Santolucito</a></div>
+  </div>
+  <div class="entry">
+    <div class="row"><b><a href="https://www.cise.ufl.edu">University of Florida</a></b><span>Aug 2021 &ndash; May 2025</span></div>
+    <div class="row"><i>B.S. in Computer Science</i><span>GPA: 3.96/4.0</span></div>
+  </div>
+
+  <h4 class="section">Publications</h4>
+  <div class="entry">
+    <b>PALS: Preference-guided Active Automata Learning for Symbolic Reinforcement Learning in Games</b>
+    <div>William Fishell, <b>Christian Scaff</b>, Sam Kouteili, and Mark Santolucito.
+      <i>NExT-Game: New Frontiers in Game-Theoretic Learning</i>, ICML 2026 Workshop</div>
+    <div><a href="https://openreview.net/forum?id=jRUJpASPQJ">openreview.net/forum?id=jRUJpASPQJ</a></div>
+  </div>
+  <div class="entry">
+    <b>Mining Beyond the Bools: Learning Data Transformations and Temporal Specifications</b>
+    <div>Sam Kouteili, William Fishell, <b>Christian Scaff</b>, Mark Santolucito, and Ruzica Piskac.
+      To appear, <i>ESOP 2027</i></div>
+    <div><a href="https://arxiv.org/abs/2603.06710">arxiv.org/abs/2603.06710</a></div>
+  </div>
+
+  <h4 class="section">Experience</h4>
+  <div class="entry">
+    <div class="row"><b>Graduate Research Assistant</b><span>Sep 2025 &ndash; Present</span></div>
+    <div class="row"><i><a href="https://www.cs.columbia.edu/~ms6147/#about">Columbia University &ndash; Formal Methods and Reasoning Group (FoRG)</a></i><i>New York, NY</i></div>
+    <ul>
+      <li>Recruited and now lead a ten-person team across developer experience, systems, and hardware, executing the FPGA
+        research agenda I first-authored, which targets a public beta in December 2026.
+        <a href="https://manhattanreasoning.com/research">manhattanreasoning.com/research</a></li>
+      <li>Led development of the cloud FPGA platform with two other students: seven Lattice ECP5-85F boards running
+        LiteX/VexRiscv SoCs, a FastAPI and Redis orchestrator, and on-demand AWS Fargate build tasks.</li>
+      <li>Published <i><a href="https://pypi.org/project/manhattan-reasoning-gym">manhattan-reasoning-gym</a></i> to PyPI:
+        containerized Yosys and nextpnr synthesis, sandboxed agent execution, and remote FPGA programming.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="row"><b>Entrepreneurial Lead</b><span>Jun 2026 &ndash; Aug 2026</span></div>
+    <div class="row"><i>NSF I-Corps National Program ($50,000 award) &ndash; Manhattan Reasoning</i><i>New York, NY</i></div>
+    <ul>
+      <li>Ran 100 customer interviews with hardware and EDA engineers, AI researchers, and quant firms for a venture
+        commercializing verifiable RL environments for RTL design.</li>
+      <li>Recommended against commercializing on a lack of product-market fit and transitioned the venture into an
+        open-source research project.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="row"><b>Research Intern</b><span>May 2025 &ndash; Aug 2025</span></div>
+    <div class="row"><i><a href="https://gtri.gatech.edu">Georgia Tech Research Institute</a></i><i>Atlanta, GA</i></div>
+    <ul>
+      <li>Developed <a href="projects.html#wyvern-graph">Wyvern Graph</a>, a Python tool that translates LLVM IR into knowledge graphs through 28 node types and 41
+        edge types, producing training data for differentiable inductive logic programming over program structure.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="row"><b>Research Programmer</b><span>Aug 2024 &ndash; May 2025</span></div>
+    <div class="row"><i><a href="https://gataslab.org/index.html">University of Florida GATAS Laboratory</a></i><i>Gainesville, FL</i></div>
+    <ul>
+      <li>Wrote four domain-specific languages for AlgebraicJulia, an open-source Julia ecosystem for applied category theory,
+        converting three handwritten DSLs (ACSets.jl, Catlab.jl, DiagrammaticEquations.jl) into parsing expression grammars.</li>
+      <li>Implemented a DSL for cellular sheaf creation in AlgebraicOptimization.jl with MLStyle.jl.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="row"><b>Technology Architecture Analyst</b><span>Jun 2024 &ndash; Aug 2024</span></div>
+    <div class="row"><i>Accenture</i><i>Chicago, IL</i></div>
+    <ul>
+      <li>Replaced a manual monthly IT reporting process for a healthcare client with an automated Power BI report.</li>
+      <li>Analyzed five months of ServiceNow CMDB data and consolidated it into an interactive Power BI dashboard.</li>
+    </ul>
+  </div>
+
+  <h4 class="section">Independent Research</h4>
+  <div class="entry">
+    <div class="row"><b><a href="projects.html#equivalence-checking">Equivalence Checking LLM-Optimized Code for GPUs</a></b><span>Spring 2026</span></div>
+    <div class="row"><i>Columbia University &ndash; COMS E6901, advised by Prof. Stephen A. Edwards</i><i>New York, NY</i></div>
+    <ul>
+      <li>Tested whether LLM-generated CUDA optimizations can be proven to preserve the semantics of the C++ they replace,
+        for the equivalence checker in the front-end of MACCHIATO, a compiler toolchain under DARPA&rsquo;s MOCHA program.</li>
+      <li>Found that model checking with CBMC does not scale to real CUDA kernels, and recommended an agent-driven Lean 4
+        theorem prover approach instead.</li>
+    </ul>
+  </div>
+
+  <h4 class="section">Teaching</h4>
+  <div class="entry">
+    <div class="row"><b>Undergraduate Teaching Assistant</b><span>Jan 2024 &ndash; Dec 2024</span></div>
+    <div class="row"><i><a href="https://www.cise.ufl.edu">University of Florida CISE Department</a></i><i>Gainesville, FL</i></div>
+    <ul>
+      <li>Held weekly office hours for COP 4020: Programming Language Concepts, a course on programming language design
+        and implementation.</li>
+    </ul>
+  </div>
+
+  <h4 class="section">Open Source Contributions</h4>
+  <div class="entry">
+    <b>Author &amp; Maintainer</b>
+    <ul>
+      <li><b><a href="projects.html#manhattan-reasoning">Manhattan Reasoning Gym</a></b> &ndash; FPGA synthesis and agent-sandboxing toolkit, published on PyPI.
+        <a href="https://pypi.org/project/manhattan-reasoning-gym">pypi.org/project/manhattan-reasoning-gym</a></li>
+      <li><b><a href="projects.html#wyvern-graph">Wyvern Graph</a></b> &ndash; LLVM IR to knowledge graph translator, released under MIT.
+        <a href="https://github.com/cscaff/Wyvern-Graph">github.com/cscaff/Wyvern-Graph</a></li>
+    </ul>
+  </div>
+  <div class="entry">
+    <b>Contributor</b>
+    <ul>
+      <li><b><a href="projects.html#algebraicjulia">AlgebraicJulia</a></b> &ndash; Applied category theory in Julia; contributed to ACSets.jl, AlgebraicOptimization.jl,
+        Catlab.jl, and DiagrammaticEquations.jl. <a href="https://github.com/AlgebraicJulia">github.com/AlgebraicJulia</a></li>
+    </ul>
+  </div>
+
+  <h4 class="section">Skills</h4>
+  <table class="skills" cellspacing="0">
+    <tr><th>Languages</th><td>Python, C/C++, Julia, Java, TypeScript, SQL (MariaDB)</td></tr>
+    <tr><th>Hardware Design</th><td>SystemVerilog, Amaranth HDL, SystemC, LiteX, VexRiscv</td></tr>
+    <tr><th>EDA &amp; FPGA</th><td>Yosys, nextpnr, Siemens Catapult HLS, Intel Quartus, Xilinx Vivado, Lattice ECP5, DE1-SoC</td></tr>
+    <tr><th>Formal &amp; Compilers</th><td>CBMC, Spot, SMT Solvers, Temporal Logics, LLVM (IR analysis)</td></tr>
+    <tr><th>Machine Learning</th><td>PyTorch, Scikit-learn, Pandas, NumPy</td></tr>
+    <tr><th>Infrastructure</th><td>Docker, FastAPI, Redis, nginx, AWS Fargate, DigitalOcean, Tailscale, React, Git</td></tr>
+    <tr><th>Spoken</th><td>English, Portuguese</td></tr>
+  </table>
+  </div>
+</div>
+</body>
+</html>
