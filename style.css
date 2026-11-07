@@ -98,14 +98,17 @@ li { margin-bottom: 10px; }
   body { margin: 8px 16px; }
   .main { flex-direction: column-reverse; }
   .main .portrait { flex: none; width: 220px; }
-  /* compact header so the page content starts higher */
-  .header .name { font-size: 1.3em; }
-  .header .affil { font-size: 1em; margin-top: 6px; }
-  /* the nav wraps on phones; drop the bars so no line starts with one */
-  .nav { margin-top: 8px; column-gap: 16px; }
-  .nav a + a::before { display: none; }
+  /* Phone header: name and title on the left with the logo beside them,
+     and the nav on its own full-width line underneath */
+  .header { display: grid; grid-template-columns: 1fr auto; column-gap: 12px; align-items: center; }
+  .header > div { display: contents; }
+  .header .name { grid-column: 1; grid-row: 1; font-size: 1.3em; }
+  .header .affil { grid-column: 1; grid-row: 2; font-size: 1em; margin-top: 4px; }
+  .header > a { grid-column: 2; grid-row: 1 / 3; }
+  .header img { height: 52px; }
+  .nav { grid-column: 1 / -1; grid-row: 3; margin-top: 12px; justify-content: space-between; column-gap: 10px; font-size: 0.92em; }
+  .nav a + a::before { display: none; }  /* spacing replaces the bars */
   .contact td { padding-right: 12px; }
-  .header img { height: 56px; }
 }
 
 /* Project page: image floats right of the description, below the title row */
