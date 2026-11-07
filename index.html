@@ -84,6 +84,12 @@
     { src: "images/random/small/20250330_180922000_iOS.jpeg", caption: "Me modeling as a member of the circus." }
   ];
 
+  // Touchscreens have no mouse, so say "Tap" there instead of "Click"
+  if (window.matchMedia && window.matchMedia("(hover: none)").matches) {
+    surprises[0].caption = "Tap for Surprise!";
+    document.getElementById("surprise-caption").textContent = surprises[0].caption;
+  }
+
   var current = 0;  // index of the photo on screen; starts on the original portrait
   document.getElementById("surprise").addEventListener("click", function () {
     var next = current;
