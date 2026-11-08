@@ -129,3 +129,15 @@ li { margin-bottom: 10px; }
   color: #C07000; background: #FFF6E5;
   font-size: 0.75em; font-weight: normal; font-style: italic;
 }
+
+/* Coursework page: course code in a fixed column, instructor in grey */
+.cvdoc .section a { color: inherit; }
+.cvdoc h5 { margin: 12px 0 4px; }
+.courses { list-style: none; padding-left: 0 !important; }
+.courses li { padding-left: 7.5em; text-indent: -7.5em; }
+.courses .code { display: inline-block; width: 7.5em; text-indent: 0; font-family: "Courier New", Courier, monospace; font-size: 0.9em; }
+.courses .prof { color: #808080; }
+@media (max-width: 640px) {
+  .courses li { padding-left: 0; text-indent: 0; margin-bottom: 8px; }
+  .courses .code { display: block; width: auto; }
+}
